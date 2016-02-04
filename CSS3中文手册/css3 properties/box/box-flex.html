@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>box-flex</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        (function () {
+            var e = "article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,time,pre".split(','),i = e.length;
+            while (i--) {document.createElement(e[i])}
+        })();
+    </script>
+<![endif]-->
+</head>
+<body>
+<section id="pagebd">
+	<section id="main">
+		<div id="maincontent">
+			<nav class="g-mod" id="guide">
+				<div class="from">box-flex</div>
+			</nav>
+			<section id="bd">
+				<section class="g-mod g-attr1">
+					<h2 class="tit">语法：</h2>
+					<div class="cont">
+						<p class="yello">box-flex:取值</p>
+					</div>
+					<h2 class="tit">说明：</h2>
+					<div class="cont">
+						<p>box-flex属性定义盒子的弹性空间</p>
+					</div>
+					<h2 class="tit">使用方法：</h2>
+					<div class="cont">
+						<p><strong>box-flex:1.0</strong>; <span class="defaultvalue">/**/</span> </p>
+					</div>
+					<h2 class="tit">兼容性：</h2>
+					<div class="cont">
+						<ul class="support-type">
+							<li><span class="support">浅绿</span> = 支持</li>
+							<li><span class="unsupport">红色</span> = 不支持</li>
+							<li><span class="partsupport">粉色</span> = 部分支持</li>
+						</ul>
+						<table class="g-data">
+							<thead>
+								<tr>
+									<th><a title="查看本文档测试时所用浏览器版本" href="#title">支持版本</a>\类型</th>
+									<th><span class="browser-ie">IE</span></th>
+									<th><span class="browser-firefox">Firefox</span></th>
+									<th><span class="browser-safari">Safari</span></th>
+									<th><span class="browser-chrome">Chrome</span></th>
+									<th><span class="browser-opera">Opera</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>较早版本</th>
+									<td rowspan="2" class="unsupport">6.0-11.0</td>
+									<td rowspan="2" class="support">4.0.-25.0 <sup class="fix">-moz-</sup></td>
+									<td rowspan="2" class="support">5.1.7 <sup class="fix">-webkit-</sup></td>
+									<td rowspan="2" class="support">4.0-31.0 <sup class="fix">-webkit-</sup></td>
+									<td class="unsupport">9.5-14.0</td>
+								</tr>
+								<tr>
+									<th>较新版本</th>
+									<td class="support">15.0-18.0 <sup class="fix">-webkit-</sup></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>橘色说明要加浏览器的前缀</p>
+					<h2 class="tit">事例：</h2>
+					<div class="cont">
+							<pre class="code">
+ body
+        {
+            display:-moz-box;
+            -moz-box-orient:horizontal;   /*定义盒子元素内的元素从左到右流动显示*/
+            width:200px;
+            height:150px;
+        }
+        #box1
+        {
+            background:red;
+            -moz-box-flex:1.0;
+        }
+        #box2
+        {
+            background:blue;
+            -moz-box-flex:2.0;
+        }
+        #box3
+        {
+            background:orange;
+            -moz-box-flex:1.0;
+        }
+						</pre>
+						<p><img src="images/5.png" /></p>
+					</div>
+				</section>
+				<section class="g-mod" id="related">
+					<p class="g-color-light">对css3如有描述有误的请见谅，或有补充完善的，请提交问题到<a href="mailto:uizhu@outlook.com">uizhu@outlook.com</a></p>
+				</section>
+			</section>
+		</div>
+	</section>
+</section>
+</body>
+</html>

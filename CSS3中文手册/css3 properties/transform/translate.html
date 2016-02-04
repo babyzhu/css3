@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>translate()</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        (function () {
+            var e = "article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,time,pre".split(','),i = e.length;
+            while (i--) {document.createElement(e[i])}
+        })();
+    </script>
+<![endif]-->
+</head>
+<body>
+<section id="pagebd">
+	<section id="main">
+		<div id="maincontent">
+			<nav class="g-mod" id="guide">
+				<div class="from">translate()</div>
+			</nav>
+			<section id="bd">
+				<section class="g-mod g-attr1">
+					<h2 class="tit">语法：</h2>
+					<div class="cont">
+						<p class="yello">transform:translate(x,y) | translateX(x) | translateY(y) | translateZ(z) | translate3d(x,y,x)</p>
+					</div>
+					<h2 class="tit">说明：</h2>
+					<div class="cont">
+						<p>translate()方法将元素沿着水平方向<strong>（X轴）</strong>和垂直方向移动<strong>（Y轴）</strong></p>
+						<p>（1）<strong>translateX(x)</strong>：元素仅在水平方向移动（X轴移动）；x表示元素在水平方向（X轴）的移动距离，单位为px、em或百分比等；当x为<strong>正时</strong>，表示元素在水平方向向<strong>右移动</strong>（X轴正方向）；当x为<strong>负时</strong>，表示元素在水平方向向<strong>左移动</strong>（X轴负方向）。</p>
+						<p>（2）<strong>translateY(y)</strong>：元素仅在垂直方向移动（Y轴移动）；y表示元素在垂直方向（y轴）的移动距离，单位为px、em或百分比等；当y为<strong>正时</strong>，表示元素在垂直方向<strong>向下移动</strong>；当y为<strong>负时</strong>，表示元素在垂直方向<strong>向上移动</strong>。</p>
+						<p>（3）<strong>transklate(x,y)</strong>：元素在水平方向和垂直方向同时移动（X轴和Y轴同时移动）；x表示元素在水平方向（x轴）的移动距离，y表示元素在水平方向（y轴）的移动距离；</p>
+						<p><strong>注意</strong>，Y是一个<strong>可选参数</strong>，如果没有设置Y值，则表示元素仅仅沿着<strong>X轴正方向移动</strong>。</p>
+						<p>3D的还未普及，以后完善</p>
+					</div>
+					<h2 class="tit">使用方法：</h2>
+					<div class="cont">
+						<p><strong>transform:translateX(20px);</strong>; <span class="defaultvalue">/*向右移动20像素*/</span> </p>
+					</div>
+					<h2 class="tit">兼容性：</h2>
+					<div class="cont">
+						<ul class="support-type">
+							<li><span class="support">浅绿</span> = 支持</li>
+							<li><span class="unsupport">红色</span> = 不支持</li>
+							<li><span class="partsupport">粉色</span> = 部分支持</li>
+						</ul>
+						<table class="g-data">
+							<thead>
+								<tr>
+									<th><a title="查看本文档测试时所用浏览器版本" href="#title">支持版本</a>\类型</th>
+									<th><span class="browser-ie">IE</span></th>
+									<th><span class="browser-firefox">Firefox</span></th>
+									<th><span class="browser-safari">Safari</span></th>
+									<th><span class="browser-chrome">Chrome</span></th>
+									<th><span class="browser-opera">Opera</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>版本</th>
+									<td class="unsupport">6-8</td>
+									<td class="experimentsupport" rowspan="2">4-18</td>
+									<td class="experimentsupport" rowspan="2">5.1.7</td>
+									<td class="experimentsupport" rowspan="2">13-23</td>
+									<td class="experimentsupport" rowspan="2">11.5-12.5</td>
+								</tr>
+								<tr>
+									<th>版本</th>
+									<td class="experimentsupport">9-10</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>ie9 以上，和高版本浏览器。不过transform都要加上对应的前缀，-o,-moz,-webkit,-ms</p>
+						<p>Internet Explorer 10、Firefox、Opera 支持 transform 属性。</p>
+						<p>Internet Explorer 9 支持替代的 -ms-transform 属性（仅适用于 2D 转换）。</p>
+						<p>Safari 和 Chrome 支持替代的 -webkit-transform 属性（3D 和 2D 转换）。</p>
+						<p>Opera 只支持 2D 转换。</p>
+					</div>
+					<h2 class="tit">事例：</h2>
+					<div class="cont">
+						<p><strong>translateX(x)</strong></p>
+						<pre class="code">div{
+							width:200px;
+							height:100px;
+							color:white;
+							background-color: #3EDFF4;
+							text-align:center;
+							transform:translateX(20px);
+							-webkit-transform:translateX(20px);  /*兼容-webkit-引擎浏览器*/
+							-moz-transform:translateX(20px);     /*兼容-moz-引擎浏览器*/
+							}
+						</pre>
+						<p><img src="images/1.png" /></p>
+						<p><strong>translateY(y)</strong></p>
+						<pre class="code">div{
+							width:200px;
+							height:100px;
+							color:white;
+							background-color: #3EDFF4;
+							text-align:center;
+							transform:translateY(20px);
+							-webkit-transform:translateY(20px);  /*兼容-webkit-引擎浏览器*/
+							-moz-transform:translateY(20px);     /*兼容-moz-引擎浏览器*/
+							}
+						</pre>
+						<p><img src="images/2.png" /></p>
+						<p><strong>translate(x,y)</strong></p>
+						<pre class="code">div{
+							width:200px;
+							height:100px;
+							color:white;
+							background-color: #3EDFF4;
+							text-align:center;
+							transform:translate(20px,40px);
+							-webkit-transform:translate(20px,40px);  /*兼容-webkit-引擎浏览器*/
+							-moz-transform:translate(20px,40px);     /*兼容-moz-引擎浏览器*/
+							}
+						</pre>
+						<p><img src="images/3.png" /></p>
+						<strong>拓展</strong>
+						<p>其实，单纯地对某个元素设置位移是没有太多实际的意义。位移translate()方法一般都是结合CSS3动画一起使用，从而实现上下左右移动的动画效果。见动画分析</p>
+					</div>
+				</section>
+				<section class="g-mod" id="related">
+					<p class="g-color-light">对css3如有描述有误的请见谅，或有补充完善的，请提交问题到<a href="mailto:uizhu@outlook.com">uizhu@outlook.com</a></p>
+				</section>
+			</section>
+		</div>
+	</section>
+</section>
+</body>
+</html>

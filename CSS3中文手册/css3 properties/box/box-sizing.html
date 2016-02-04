@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>box-sizing</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        (function () {
+            var e = "article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,time,pre".split(','),i = e.length;
+            while (i--) {document.createElement(e[i])}
+        })();
+    </script>
+<![endif]-->
+</head>
+<body>
+<section id="pagebd">
+	<section id="main">
+		<div id="maincontent">
+			<nav class="g-mod" id="guide">
+				<div class="from">box-sizing</div>
+			</nav>
+			<section id="bd">
+				<section class="g-mod g-attr1">
+					<h2 class="tit">语法：</h2>
+					<div class="cont">
+						<p class="yello">box-sizing:取值</p>
+					</div>
+					<h2 class="tit">说明：</h2>
+					<div class="cont">
+						<p>box-sizing属性能够事先定义盒模型的尺寸解析方式</strong></p>
+						<br>
+						<p>在css中盒模型被分为两种，第一种是w3c的标准模型，另一种是ie的传统模型，如下计算公式</p>
+						<p><strong>1.W3C标准盒模型</strong></p>
+						<pre class="code">外盒尺寸计算（元素空间尺寸）
+
+element空间高度＝内容高度＋内距＋边框＋外距
+
+element空间宽度＝内容宽度＋内距＋边框＋外距
+
+内盒尺寸计算（元素大小）
+
+element高度＝内容高度＋内距＋边框（height为内容高度）
+
+element宽度＝内容宽度＋内距＋边框（width为内容宽度）</pre>
+					<p><strong>2.IE传统下盒模型（IE6以下，不包含IE6版本或”QuirksMode下IE5.5+”）</strong></p>
+					<pre class="code">外盒尺寸计算（元素空间尺寸）
+
+element空间高度＝内容高度＋外距（height包含了元素内容宽度、边框、内距）
+
+element宽间宽度＝内容宽度＋外距（width包含了元素内容宽度、边框、内距）
+
+内盒尺寸计算（元素大小）
+
+element高度＝内容高度（height包含了元素内容宽度、边框、内距）
+
+element宽度＝内容宽度（width包含了元素内容宽度、边框、内距）</pre>
+					<table class="tables">
+                        <caption>box-sizing属性取值</caption>
+                        <thead>
+                            <tr>
+                                <th style="width:120px;">属性值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>content-box</td>
+                                <td> 	
+
+默认值，其让元素维持W3C的标准盒模型，也就是说元素的宽度和高度（width/height）等于元素边框宽度（border）加上元素内距（padding）加上元素内容宽度或高度（content width/ height），也就是element width/height = border + padding + content width / height</td>
+                            </tr>
+                            <tr>
+                                <td>border-box</td>
+                                <td>重新定义CSS2.1中盒模型组成的模式，让元素维持IE传统的盒模型（IE6以下版本和IE6-7怪异模式），也就是说元素的宽度或高度等于元素内容的宽度或高度。从上面盒模型介绍可知，这里的内容宽度或高度包含了元素的border、padding、内容的宽度或高度（此处的内容宽度或高度＝盒子的宽度或高度—边框—内距）。</td>
+                            </tr>
+							<tr>
+								<td>inherit</td>
+								<td>使元素继承父元素的盒模型模式</td>
+							</tr>
+                        </tbody>
+                    </table>	
+					</div>
+					<h2 class="tit">使用方法：</h2>
+					<div class="cont">
+						<p><strong>box-sizing:content-box</strong>; <span class="defaultvalue">/**/</span> </p>
+					</div>
+					<h2 class="tit">兼容性：</h2>
+					<div class="cont">
+						<ul class="support-type">
+							<li><span class="support">浅绿</span> = 支持</li>
+							<li><span class="unsupport">红色</span> = 不支持</li>
+							<li><span class="partsupport">粉色</span> = 部分支持</li>
+						</ul>
+						<table class="g-data">
+							<thead>
+								<tr>
+									<th><span class="browser-ie">IE</span></th>
+									<th><span class="browser-firefox">Firefox</span></th>
+									<th><span class="browser-safari">Safari</span></th>
+									<th><span class="browser-chrome">Chrome</span></th>
+									<th><span class="browser-opera">Opera</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="unsupport">6.0-7.0</td>
+									<td class="support" rowspan="2">4.0-28.0 <sup class="fix">-moz-</sup></td>
+									<td class="support" rowspan="2">4.0-5.0 <sup class="fix">-webkit-</sup></td>
+									<td class="support" rowspan="2">4.0-9.0 <sup class="fix">-webkit-</sup></td>
+									<td class="support" rowspan="3">15.0</td>
+								</tr>
+								<tr>
+									<td class="support">8.0 <sup class="fix">-ms-</sup></td>
+								</tr>
+								<tr>
+									<td class="support">9.0</td>
+									<td class="support">29.0</td>
+									<td class="support">5.1</td>
+									<td class="support">10.0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2 class="tit">事例：</h2>
+					<div class="cont">
+						<p><img src="images/1.jpg"></p>
+					</div>
+				</section>
+				<section class="g-mod" id="related">
+					<p class="g-color-light">对css3如有描述有误的请见谅，或有补充完善的，请提交问题到<a href="mailto:uizhu@outlook.com">uizhu@outlook.com</a></p>
+				</section>
+			</section>
+		</div>
+	</section>
+</section>
+</body>
+</html>
