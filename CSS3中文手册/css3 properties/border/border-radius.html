@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>border-radius</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        (function () {
+            var e = "article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,time,pre".split(','),i = e.length;
+            while (i--) {document.createElement(e[i])}
+        })();
+    </script>
+<![endif]-->
+</head>
+<body>
+<section id="pagebd">
+	<section id="main">
+		<div id="maincontent">
+			<nav class="g-mod" id="guide">
+				<div class="from">border-radius </div>
+			</nav>
+			<section id="bd">
+				<section class="g-mod g-attr1">
+					<h2 class="tit">语法：</h2>
+					<div class="cont">
+						<p class="yello">border-radius:长度值(4个数值);</p>
+					</div>
+					<h2 class="tit">说明：</h2>
+					<div class="cont">
+						<p>border-radius是向元素添加圆角边框。</p>
+					</div>
+					<h2 class="tit">使用方法：</h2>
+					<div class="cont">
+						<p><strong>border-radius:10px</strong>;
+							<span class="defaultvalue">/*所有角都使用半径为10px的圆角*/</span>
+						</p>
+						<p><strong>border-radius:5px 4px 3px 2px</strong>;
+							<span class="defaultvalue">/*四个半径值分别是左上角，右上角，右下角，左下角，顺时针*/</span>
+						</p>
+						<p><strong>border-radius属性派生子属性</strong>:</p>
+						<p>border-top-right-radius：右上角</p>
+						<p>border-bottom-right-radius：右下角</p>
+						<p>border-bottom-left-radius：左下角</p>
+						<p>border-top-left-radius：左上角</p>
+						<p>单位可以用<strong>百分比</strong>或者<strong>em</strong>，但兼容性目前还不太好</p>
+					</div>
+						<h2 class="tit">兼容性：</h2>
+					<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="support">2.0-12.0<br><sup class="fix">-moz-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">4.0-43.0<br><sup class="fix">-webkit-</sup></td>
+						<td class="support">3.1-8.1<br><sup class="fix">-webkit-</sup></td>
+						<td class="support">10.5-28.0<br><sup class="fix">-webkit-</sup></td>
+						<td class="support">3.2-8.1<br><sup class="fix">-webkit-</sup></td>
+						<td class="support">2.1-4.4.4<br><sup class="fix">-webkit-</sup></td>
+						<td class="support">18.0-40.0<br><sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">5.0+</td>
+						<td class="support">5.0+</td>
+						<td class="support">10.5+</td>
+						<td class="support">4.0+</td>
+						<td class="support">2.2+</td>
+						<td class="support">18.0+</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">Firefox从13.0开始移除对<code class="incode">-moz-</code>的支持，仅支持标准的<code class="incode">border-radius</code>写法，在4.0-12.0区间，两种方式都支持。</li>
+			</ol>
+		</div>
+					<h2 class="tit">事例：</h2>
+					<div class="cont">
+						<h3 class="tit2">实心上半圆：</h3>
+						<p>方法：把高度设为宽度的一半，并且只设置左上角和右上角的半径元素和高度一致</p>
+						<pre class="code" align="left">div{
+							height:<span style="color:#B22222;">50px</span>;/*是width的一半*/
+							width:<span style="color:#B22222;">100px</span>;
+							background:#9da;
+							border-radius:<span style="color:#B22222;">50px 50px</span> 0 0;/*半径至少设置为height的值*/}
+						</pre>
+						<p><img class="examplepic" alt="" src="images/5.jpg"/></p>
+					</div>
+					<div class="cont">
+						<h3 class="tit2">实心圆：</h3>
+						<p>方法：把宽度（width）与高度(height)值设置为一致（也就是正方形），并且四个圆角值都设置为它们值的一半</p>
+						<pre class="code">div{
+							height:<span style="color:#B22222;">100px</span>;/*与width设置一致*/
+							width:<span style="color:#B22222;">100px</span>;
+							background:#9da;
+							border-radius:<span style="color:#B22222;">50px</span>;/*四个圆角值都设置为宽度或高度值的一半*/ }
+						</pre>
+						<p><img class="examplepic" alt="" src="images/6.jpg"/></p>
+					</div>
+					
+				</section>
+				<section class="g-mod" id="related">
+					<p class="g-color-light">对css3如有描述有误的请见谅，或有补充完善的，请提交问题到<a href="mailto:uizhu@outlook.com">uizhu@outlook.com</a></p>
+				</section>
+			</section>
+		</div>
+	</section>
+</section>
+</body>
+</html>

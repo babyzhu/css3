@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>font-size-adjust</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        (function () {
+            var e = "article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,time,pre".split(','),i = e.length;
+            while (i--) {document.createElement(e[i])}
+        })();
+    </script>
+<![endif]-->
+</head>
+<body>
+<section id="pagebd">
+	<section id="main">
+		<div id="maincontent">
+			<nav class="g-mod" id="guide">
+				<div class="from">font-size-adjust</div>
+			</nav>
+			<section id="bd">
+				<section class="g-mod g-attr1">
+					<h2 class="tit">语法：</h2>
+					<div class="cont">
+						<p class="yello">font-size-adjust:属性值</p>
+						<p>有一定实践经验的前端开发者都了解：在网页中，如果改变了字体类型，则页面中使用该字体类型的文字大小都有可能发生变化，从而可能导致原来设定好的页面布局产生混乱。</p>
+						<p>比如：</p>
+						<p><img src="images/9.png"></p>
+						<p><img src="images/8.png"></p>
+					</div>
+					<h2 class="tit">说明：</h2>
+					<div class="cont">
+						<p>font-size-adjust属性值取值为一个“aspect值”</p>
+						<p class="defaultvalue">字体的小写字母“x”的高度与该字体“font-size”高度之间的比率被称为一个字体的aspect。aspect=(x-height)/(font-size)</p>
+					</div>
+					<h2 class="tit">使用方法：</h2>
+					<div class="cont">
+						<p><strong>font-size-adjust:0.46</strong>;</p>
+						<strong>下表为一些常用的西方字体的aspect值：</strong>
+						<table class="tables">
+							<caption>
+							常用西方字体的参考值
+							</caption>
+							<thead>
+								<tr>
+									<th>字体类型</th>
+									<th>aspect值</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Fjemish Script</td>
+									<td>0.28</td>
+								</tr>
+								<tr>
+									<td>Caflisch Script Web</td>
+									<td>0.37</td>
+								</tr>
+								<tr>
+									<td>Bernhard Modern</td>
+									<td>0.4</td>
+								</tr>
+								<tr>
+									<td>Gill Sans</td>
+									<td>0.46</td>
+								</tr>
+								<tr>
+									<td>Times New Roman</td>
+									<td>0.46</td>
+								</tr>
+								<tr>
+									<td>Minion Web</td>
+									<td>0.47</td>
+								</tr>
+								<tr>
+									<td>Myriad Web</td>
+									<td>0.48</td>
+								</tr>
+								<tr>
+									<td>Georgia</td>
+									<td>0.5</td>
+								</tr>
+								<tr>
+									<td>Trebuchet MS</td>
+									<td>0.53</td>
+								</tr>
+								<tr>
+									<td>Comic Sans MS</td>
+									<td>0.54</td>
+								</tr>
+								<tr>
+									<td>Verdana</td>
+									<td>0.58</td>
+								</tr>
+							</tbody>
+						</table>
+						<h2 class="tit">如何使用aspect值</h2>
+						<p class="red">c = (a/b)s</p>
+						<p>说明：</p>
+						<p>a：表示原来字体类型的aspect值；</p>
+						<p>b：表示现在字体类型的aspect值；</p>
+						<p>s：表示原来字体类型的font-size值；</p>
+						<p>c：表示现在字体类型的font-size值；</p>
+						<p><strong>比如：</strong></p>
+						<p>如果想将“fontsize:16px;”的Times New Roman字体修改为Verdana字体，如果想要浏览器显示的字体大小仍然保持“fontsize:16px;”的Times New Roman字体的大小，需要执行以下步骤：</p>
+						<p><strong>（1）查询得到Times New Roman字体的aspect值为0.46，Verdana字体的aspect值为0.58；</strong></p>
+						<p><strong>（2）将0.58除以0.46得到近似值1.26；</strong></p>
+						<p><strong>（3）因为需要让浏览器实际显示的字体大小为16px，所以将16px除以1.26得到近似值13px。然后在样式中指定字体大小为13px。也就是说，13px的Verdana字体相当于16px的Times New Roman字体。</strong></p>
+						
+					</div>
+					<h2 class="tit">兼容性：</h2>
+					<div class="cont">Internet Explorer 不支持 font-size-adjust 属性。</div>
+					<h2 class="tit">事例：</h2>
+					<div class="cont">
+						<pre class="code"> #div1
+        {
+            font-size:16px;
+            font-family:Times New Roman;
+            font-size-adjust:0.46;
+        }
+#div2
+{
+	font-size:13px;
+	font-family:Verdana;
+	font-size-adjust:0.58;
+}
+						</pre>
+						<p><img class="examplepic" alt="" src="images/10.png"/></p>
+						
+					</div>
+						<h2 class="tit">注意：</h2>
+						<div class="cont">
+							<p>font-size-adjust属性可能在国内网站中很少用到，但是在英文网站的开发中我们经常碰到。对于想要建立英文网站的前端工程师，对于font-size-adjust属性，这也是必要知识之一。</p>
+						</div>
+				</section>
+				<section class="g-mod" id="related">
+					<p class="g-color-light">对css3如有描述有误的请见谅，或有补充完善的，请提交问题到<a href="mailto:uizhu@outlook.com">uizhu@outlook.com</a></p>
+				</section>
+			</section>
+		</div>
+	</section>
+</section>
+</body>
+</html>

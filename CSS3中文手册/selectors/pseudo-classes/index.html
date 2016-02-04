@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>伪类选择符</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        (function () {
+            var e = "article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,time,pre".split(','),i = e.length;
+            while (i--) {document.createElement(e[i])}
+        })();
+    </script>
+<![endif]-->
+</head>
+<body>
+<section id="pagebd">
+	<section id="main">
+		<div id="maincontent">
+			<nav class="g-mod" id="guide">
+				<div class="from">伪类选择符 CSS Pseudo-Classes Selectors</div>
+			</nav>
+			<section id="bd">
+				<section class="g-mod g-attr1">
+					<h2 class="tit"><a href="index.html">伪类选择符 CSS Pseudo-Classes Selectors</a></h2>
+					<div class="cont">
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>选择符</th>
+						<th>版本</th>
+						<th>描述</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="link.html">E:link</a></td>
+						<td>CSS1</td>
+						<td>设置超链接a在未被访问前的样式。</td>
+					</tr>
+					<tr>
+						<td><a href="link.html">E:visited</a></td>
+						<td>CSS1</td>
+						<td>设置超链接a在其链接地址已被访问过时的样式。</td>
+					</tr>
+					<tr>
+						<td><a href="link.html">E:hover</a></td>
+						<td>CSS1/2</td>
+						<td>设置元素在其鼠标悬停时的样式。</td>
+					</tr>
+					<tr>
+						<td><a href="link.html">E:active</a></td>
+						<td>CSS1/2</td>
+						<td>设置元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式。</td>
+					</tr>
+					<tr>
+						<td><a href="focus.html">E:focus</a></td>
+						<td>CSS1/2</td>
+						<td>设置元素在成为输入焦点（该元素的onfocus事件发生）时的样式。</td>
+					</tr>
+					<tr>
+						<td><a href="lang(fr).html">E:lang(fr)</a></td>
+						<td>CSS2</td>
+						<td>匹配使用特殊语言的E元素。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="not(s).html">E:not(s)</a></td>
+						<td>CSS3</td>
+						<td>匹配不含有s选择符的元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="root.html">E:root</a></td>
+						<td>CSS3</td>
+						<td>匹配E元素在文档的根元素。</td>
+					</tr>
+					<tr>
+						<td><a href="first-child.html">E:first-child</a></td>
+						<td>CSS2</td>
+						<td>匹配父元素的第一个子元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="last-child.html">E:last-child</a></td>
+						<td>CSS3</td>
+						<td>匹配父元素的最后一个子元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="only-child.html">E:only-child</a></td>
+						<td>CSS3</td>
+						<td>匹配父元素仅有的一个子元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="nth-child(n).html">E:nth-child(n)</a></td>
+						<td>CSS3</td>
+						<td>匹配父元素的第n个子元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="nth-last-child(n).html">E:nth-last-child(n)</a></td>
+						<td>CSS3</td>
+						<td>匹配父元素的倒数第n个子元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="first-of-type.html">E:first-of-type</a></td>
+						<td>CSS3</td>
+						<td>匹配同类型中的第一个同级兄弟元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="last-of-type.html">E:last-of-type</a></td>
+						<td>CSS3</td>
+						<td>匹配同类型中的最后一个同级兄弟元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="only-of-type.html">E:only-of-type</a></td>
+						<td>CSS3</td>
+						<td>匹配同类型中的唯一的一个同级兄弟元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="nth-of-type(n).html">E:nth-of-type(n)</a></td>
+						<td>CSS3</td>
+						<td>匹配同类型中的第n个同级兄弟元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="nth-of-type(n).html">E:nth-last-of-type(n)</a></td>
+						<td>CSS3</td>
+						<td>匹配同类型中的倒数第n个同级兄弟元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="empty.html">E:empty</a></td>
+						<td>CSS3</td>
+						<td>匹配没有任何子元素（包括text节点）的元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="checked.html">E:checked</a></td>
+						<td>CSS3</td>
+						<td>匹配用户界面上处于选中状态的元素E。(用于input type为radio与checkbox时)</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="enabled.html">E:enabled</a></td>
+						<td>CSS3</td>
+						<td>匹配用户界面上处于可用状态的元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="disabled.html">E:disabled</a></td>
+						<td>CSS3</td>
+						<td>匹配用户界面上处于禁用状态的元素E。</td>
+					</tr>
+					<tr>
+						<td><a class="g-color-css3-new" href="target.html">E:target</a></td>
+						<td>CSS3</td>
+						<td>匹配相关URL指向的E元素。</td>
+					</tr>
+					<tr>
+						<td><a href="@page-first.html">@page:first</a></td>
+						<td>CSS2</td>
+						<td>设置页面容器第一页使用的样式。仅用于<a href="../../rules/@page.html">@page</a>规则</td>
+					</tr>
+					<tr>
+						<td><a href="@page-left.html">@page:left</a></td>
+						<td>CSS2</td>
+						<td>设置页面容器位于装订线左边的所有页面使用的样式。仅用于<a href="../../rules/@page.html">@page</a>规则</td>
+					</tr>
+					<tr>
+						<td><a href="@page-right.html">@page:right</a></td>
+						<td>CSS2</td>
+						<td>设置页面容器位于装订线右边的所有页面使用的样式。仅用于<a href="../../rules/@page.html">@page</a>规则</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+					
+				</section>
+				
+				<section class="g-mod" id="related">
+					<p class="g-color-light">对css3如有描述有误的请见谅，或有补充完善的，请提交问题到<a href="mailto:uizhu@outlook.com">uizhu@outlook.com</a></p>
+				</section>
+			</section>
+		</div>
+	</section>
+</section>
+</body>
+</html>
